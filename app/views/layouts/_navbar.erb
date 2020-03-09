@@ -16,7 +16,9 @@
     <div class="dropdown">
        <ul>
 
-           <button type="button" class="btn btn-danger">Déconnexion</button>
+           <a>
+           <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, :class=>"btn btn-danger" %>
+           </a>
 
          
         <button type="button" class="btn btn-info">Panier</button>
@@ -24,8 +26,10 @@
            Connexion
           </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a  class="dropdown-item", class="nav-link"> S'inscrire </a>
-              <a class="dropdown-item", class="nav-link"> Se connecter</a>
+              <a  class="dropdown-item">
+              <%= link_to "Se connecter", new_user_session_path, :class=>"nav-link" %></a>
+              <a class="dropdown-item">
+              <%= link_to "S'inscrire", new_user_session_path, :class=>"nav-link" %></a>
             </div>
       </ul>
     </div>
