@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row justify-content-center mb-4 mt-5">
+    <h1>Nos photos de chats</h1>
+  </div>
+  <% 3.times do |indexrow| %>
+  <div class="row mb-3" id="grid-row-<%= indexrow %>">
+    <% 3.times do |indexcol| %>
+    <div class="col-4 text-center" id="grid-col-<%= indexcol %>">
+      Add card partial
+    </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>
