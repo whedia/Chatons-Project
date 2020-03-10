@@ -61,15 +61,12 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
-<<<<<<< HEAD
 footer {
   position: absolute;
   width: 100%;
   bottom: 0;
   margin-top: 2em;
 }
-=======
->>>>>>> 95100d53c704bc4da28d56c204ee135ea53ae156
 
 body {
   margin: 0;
@@ -149,6 +146,8 @@ dd {
 
 blockquote {
   margin: 0 0 1rem;
+  font-style: italic;
+  font-weight: bold;
 }
 
 b,
