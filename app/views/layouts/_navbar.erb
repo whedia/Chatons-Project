@@ -15,11 +15,11 @@
     </ul>
     <div class="dropdown">
        <ul>
-
+          <% if user_signed_in? %>
            <a>
            <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, :class=>"btn btn-secondary" %>
            </a>
-
+          <% else %>
          
         <button type="button" class="btn btn-info">Panier</button>
           <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,6 +31,7 @@
               <a class="dropdown-item">
               <%= link_to "S'inscrire", new_user_registration_path, :class=>"nav-link" %></a>
             </div>
+            <% end %>
       </ul>
     </div>
 
