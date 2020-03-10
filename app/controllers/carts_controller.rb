@@ -8,7 +8,6 @@ class CartsController < ApplicationController
 
   def update
     @user = current_user
-
   end
 
   def show

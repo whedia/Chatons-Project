@@ -21,7 +21,9 @@
            </a>
           <% else %>
          
-        <button type="button" class="btn btn-info">Panier</button>
+        <a type="button">
+          <%= link_to "Panier", cart_path(current_user.id), :class=>"btn btn-info" %></a>
+        </a>
           <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            Connexion
           </button>
