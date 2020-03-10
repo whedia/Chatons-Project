@@ -12,6 +12,7 @@ class CartsController < ApplicationController
 
   def show
     @useritems = current_user.cart.items
+    @price = 0
   end
 
 end

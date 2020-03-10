@@ -9,4 +9,15 @@
     </div>
     <% end %>
   </div>
+  <div class="row justify-content-center mt-3">
+    <% @useritems.each do |item| %>
+      <% @price = @price + item.price %>
+    <% end %>
+    <h3>Prix à régler : <%= @price %> €</h3>
+  </div>
+
+  <div class="row justify-content-center mb-5">
+    <%= button_to "Stripe à rajouter", root_path, {class: "ml-3 btn btn-info"} %>
+  </div>
+
 </div>
