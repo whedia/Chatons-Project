@@ -1,10 +1,5 @@
 <div class="col-6 container ">
 <h2 class= "p-4 text-center">S'inscrire</h2>
-<% flash.each do |key, value| %>
-      <div class="<%= flash_class(key) %>" role="alert">
-            <%= value %>
-      </div>
-  <% end %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>

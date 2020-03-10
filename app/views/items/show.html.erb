@@ -13,7 +13,9 @@
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         <p><small class="text-muted">Prix :</small><%= @item.price %> € </p>
         <% if current_user %>
-        <%= button_to "Ajouter au panier", cart_path(current_user.cart.id), :method => :put, params: {itemId: @item.id} %>
+        <%= button_to "Ajouter au panier", cart_path(current_user.cart.id), :method => :put, :class => "btn btn-primary", params: {itemId: @item.id} %>
+        <% else %>
+        <%= button_to "Se connecter pour ajouter un chaton à votre panier", new_user_session_path, :class => "btn btn-info" %>
         <% end %>
       </div>
     </div>
