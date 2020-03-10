@@ -11,7 +11,7 @@ class CartsController < ApplicationController
     @item = Item.find(params[:itemId])
 
    current_user.cart.addToCart(@item)
-   redirect_to 'root'
+   redirect_to cart_path(@user.cart.id)
   end
 
   def show

@@ -4,7 +4,7 @@ class Cart < ApplicationRecord
   has_many :items, through: :cart_items
 
   def addToCart(item)
-    self.items.push(itemId)
+    self.items.push(item)
   end
 
   def removeFromCart(item)
