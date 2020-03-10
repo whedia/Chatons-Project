@@ -1,7 +1,2 @@
 <%= render 'jumbotron' %>
-<% flash.each do |key, value| %>
-      <div class="<%= flash_class(key) %>" role="alert">
-            <%= value %>
-      </div>
-  <% end %>
 <%= render 'grid_items' %>

@@ -61,6 +61,12 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin-top: 2em;
+}
 
 body {
   margin: 0;
@@ -71,6 +77,10 @@ body {
   color: #888;
   text-align: left;
   background-color: #fff;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 450px;
 }
 
 
@@ -136,6 +146,8 @@ dd {
 
 blockquote {
   margin: 0 0 1rem;
+  font-style: italic;
+  font-weight: bold;
 }
 
 b,
