@@ -4,6 +4,6 @@
   <div class="card-body">
     <p class="card-text"><%= item.description%></p>
     <p><small class="text-muted">Prix :</small><%= item.price %> € </p>
-    <a href="#" class="card-link">Lien vers le show</a>
+    <%= link_to item.title, item_path(item.id)%>
   </div>
 </div>

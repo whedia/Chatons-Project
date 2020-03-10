@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   def create_cart(user)
+    if user
     if !user.cart
       user_cart = Cart.create(user: user)
       flash[:notice] = "Cart created"
@@ -7,4 +8,5 @@ class ApplicationController < ActionController::Base
       puts "cart created"
     end
   end
+end
 end
