@@ -11,5 +11,8 @@ class CartsController < ApplicationController
 
   end
 
-  
+  def show
+    @useritems = current_user.items
+  end
+
 end
