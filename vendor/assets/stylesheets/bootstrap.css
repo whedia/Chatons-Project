@@ -139,11 +139,18 @@ dt {
   font-weight: 700;
 }
 
+.title {
+  padding: 42px 0 42px 30px;
+}
 dd {
   margin-bottom: .5rem;
   margin-left: 0;
 }
 
+.card-group-show {
+  padding: 0px 0 100px 0px;
+
+}
 blockquote {
   margin: 0 0 1rem;
   font-style: italic;

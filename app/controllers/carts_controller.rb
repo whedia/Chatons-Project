@@ -8,10 +8,15 @@ class CartsController < ApplicationController
 
   def update
     @user = current_user
+    @item = Item.find(params[:itemId])
+
+   current_user.cart.addToCart(@item)
+   redirect_to cart_path(@user.cart.id)
   end
 
   def show
     @useritems = current_user.cart.items
+    @price = 0
   end
 
 end
