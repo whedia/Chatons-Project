@@ -14,7 +14,8 @@ class CartsController < ApplicationController
    redirect_to 'root'
   end
 
-  
+  def show
+    @useritems = current_user.cart.items
+  end
 
-  
 end
