@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row justify-content-center mb-5 mt-3">
+    <h1>Mon panier</h1>
+  </div>
+  <div class="row mb-3" id="grid-row">
+    <% @useritems.each do |item| %>
+    <div class="col-4 text-center" id="grid-col-<%= item.id %>">
+      <%= render 'items/card', item: item %>
+    </div>
+    <% end %>
+  </div>
+</div>
