@@ -18,7 +18,8 @@
   </div>
 
   <div class="row justify-content-center mb-5">
-    <%= button_to "Stripe à rajouter", root_path, {class: "ml-3 btn btn-info"} %>
+    <%= link_to "Commander", new_order_path(:cart_id => current_user.cart.id), :class => "ml-3 btn btn-success" %>
+     
   </div>
 
 </div>

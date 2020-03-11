@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   root 'items#index'
   resources :items
   resources :carts, only: [:create, :update, :destroy, :show]
+  resources :orders, only: [:new, :create, :destroy, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
