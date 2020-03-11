@@ -643,6 +643,10 @@ pre code {
   }
 }
 
+.text-resposive{
+  overflow: hidden;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
