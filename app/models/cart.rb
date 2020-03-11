@@ -8,6 +8,7 @@ class Cart < ApplicationRecord
   end
 
   def removeFromCart(item)
+    
     self.items.delete(item) 
   end
 end

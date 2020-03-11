@@ -10,6 +10,8 @@ module ApplicationHelper
             "alert alert-danger"
           when 'alert'
             "alert alert-danger"
+          else
+            "alert alert-info"
       end
   end
  
