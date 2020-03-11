@@ -574,6 +574,11 @@ pre code {
   overflow-y: scroll;
 }
 
+.container-edit {
+  padding-right: 50px;
+  padding-left: 50px;
+} 
+
 .container {
   width: 100%;
   padding-right: 15px;
