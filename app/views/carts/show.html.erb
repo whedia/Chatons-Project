@@ -5,8 +5,20 @@
   <div class="row mb-3" id="grid-row">
     <% @useritems.each do |item| %>
     <div class="col-4 text-center" id="grid-col-<%= item.id %>">
+       <%= button_to "Supprimer du panier", cart_path(current_user.cart.id), :method => :put, :class => "btn btn-danger", params: {itemId: item.id, operation: "remove"} %>
       <%= render 'items/card', item: item %>
     </div>
     <% end %>
   </div>
+  <div class="row justify-content-center mt-3">
+    <% @useritems.each do |item| %>
+      <% @price = @price + item.price %>
+    <% end %>
+    <h3>Prix à régler : <%= @price %> €</h3>
+  </div>
+
+  <div class="row justify-content-center mb-5">
+    <%= button_to "Stripe à rajouter", root_path, {class: "ml-3 btn btn-info"} %>
+  </div>
+
 </div>

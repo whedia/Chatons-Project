@@ -10,10 +10,12 @@
       <div class="card-body">
         <h5 class="card-title"><%= @item.title %></h5>
         <p class="card-text"><%= @item.description%></p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text"><small class="text-muted">Ajouté au catalogue le: <%=@item.created_at.to_formatted_s(:rfc822)%></small></p>
         <p><small class="text-muted">Prix :</small><%= @item.price %> € </p>
         <% if current_user %>
-        <%= button_to "Ajouter au panier", cart_path(current_user.cart.id), :method => :put, params: {itemId: @item.id} %>
+        <%= button_to "Ajouter au panier", cart_path(current_user.cart.id), :method => :put, :class => "btn btn-primary", params: {itemId: @item.id, operation: "add"} %>
+        <% else %>
+        <%= button_to "Se connecter pour ajouter un chaton à votre panier", new_user_session_path, :class => "btn btn-info" %>
         <% end %>
       </div>
     </div>
