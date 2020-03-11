@@ -17,7 +17,10 @@ class Cart < ApplicationRecord
 
   end
 
-  private
+  def clearCart
+    self.items.delete_all
+  end
+ 
 
   def returnTotalPrice
     total_price = 0
