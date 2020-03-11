@@ -11,15 +11,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-<<<<<<< HEAD
   has_one :cart, dependent: :destroy
 
-=======
-    has_one :cart, dependent: :destroy
-  
-    has_many :orders
+  has_many :orders
     # has_many :order_items, through: :orders
->>>>>>> 48eb0d4eba4171f707098b81cc0f7c64367faf30
 
     # def do_something
     #   puts "#"*60
