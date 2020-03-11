@@ -2,7 +2,7 @@
   <h3 class="card-header"><%= item.title %></h3>
   <img style="height: 200px; width: 100%; display: block;" src="<%= item.image_url %>" alt="Card image">
   <div class="card-body">
-    <p class="card-text"><%= item.description%></p>
+    <p class="responsive"><%= item.description%></p>
     <p><small class="text-muted">Prix :</small><%= item.price %> € </p>
     <%= link_to item.title, item_path(item.id)%>
   </div>
