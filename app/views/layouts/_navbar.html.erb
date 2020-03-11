@@ -7,7 +7,9 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Votre Profil</a>
+        <a>
+          <%= link_to "Votre profil", edit_user_registration_path, :class=>"nav-link" %>
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contactez-nous</a>
