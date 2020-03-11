@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   
+  namespace :admin do
+      resources :users
+      resources :carts
+      resources :cart_items
+      resources :items
+      resources :orders
+      resources :order_items
+
+      root to: "users#index"
+    end
     devise_for :users, controllers: {
       sessions: 'users/sessions',
       registrations: 'users/registrations'
