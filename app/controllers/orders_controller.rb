@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def new
-    @cart = Cart.find(params[:id])
+    @cart = Cart.find(params[:cart_id])
   end
 
   def create
