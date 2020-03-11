@@ -16,4 +16,14 @@ class Cart < ApplicationRecord
     # caruser.where("car_id = ? , user_id = ?", car.first.id, user.first.id).first.delete 
 
   end
+
+  private
+
+  def returnTotalPrice
+    total_price = 0
+    self.items.each do |item|
+       total_price += item.price
+    end 
+    return total_price
+  end
 end
