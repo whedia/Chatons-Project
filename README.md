@@ -47,5 +47,5 @@ Please make sure to update tests as appropriate.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Released version
-https://dashboard.heroku.com/apps/petits-chatons-by-lyon-thp
+https://petits-chatons-by-lyon-thp.herokuapp.com/
 
