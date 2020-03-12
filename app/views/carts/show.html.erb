@@ -7,6 +7,7 @@
     <div class="col-4 text-center" id="grid-col-<%= item.id %>">
       
        <%= button_to "Supprimer du panier", cart_path(current_cart.id), :method => :put, :class => "btn btn-danger", params: {itemId: item.id, operation: "remove"} %>
+     <br>
       <%= render 'items/card', item: item %>
     </div>
     <% end %>

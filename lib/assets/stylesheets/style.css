@@ -1,1 +1,7 @@
 /* Entrez ici le CSS avec lequel vous souhaitez jouer! */
+
+
+.btn:hover {
+  transform: scale(1.05);
+  transition-duration: 4s;
+}

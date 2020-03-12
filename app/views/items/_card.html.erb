@@ -4,6 +4,6 @@
   <div class="card-body">
     <p class="responsive"><%= item.description%></p>
     <p><small class="text-muted">Prix :</small><%= item.price %> € </p>
-    <%= link_to item.title, item_path(item.id)%>
+    <%= link_to item.title, item_path(item.id), :class=>"btn btn-outline-secondary"%>
   </div>
 </div>

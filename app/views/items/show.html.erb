@@ -13,8 +13,10 @@
         <p class="card-text"><small class="text-muted">Ajouté au catalogue le: <%=@item.created_at.to_formatted_s(:rfc822)%></small></p>
         <p><small class="text-muted">Prix :</small><%= @item.price %> € </p>
         
-        <%= button_to "Ajouter au panier", cart_path(current_cart.id), :method => :put, :class => "btn btn-primary", params: {itemId: @item.id, operation: "add"} %>
-       
+        <%= button_to "Ajouter au panier", cart_path(current_cart.id), :method => :put, :class => "btn btn-info btn-lg", params: {itemId: @item.id, operation: "add"} %>
+        <br>
+        <%= link_to "Retour au catalogue", :back, :class=>"btn btn-secondary" %>
+
       </div>
     </div>
     </div>
