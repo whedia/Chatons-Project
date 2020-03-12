@@ -5,3 +5,7 @@
   transform: scale(1.05);
   transition-duration: 4s;
 }
+
+.alert {
+  margin: 0px;
+}

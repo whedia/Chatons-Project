@@ -3,9 +3,8 @@ class ApplicationController < ActionController::Base
     if user
       if !user.cart
         user_cart = Cart.create(user: user)
-        flash[:notice] = "Cart created"
-        puts "#"*200
-        puts "cart created"
+      
+
         if session[:current_cart]
           guest_cart = Cart.find(session[:current_cart])
           guest_cart.items.each { |item| user_cart.items.push(item)}
