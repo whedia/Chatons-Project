@@ -1,0 +1,8 @@
+<h1>Merci pour votre commande <%= @order.user.email %>. Voici le récapitulatif :</h1>
+<ul>
+  <% @order.items.each do |item| %>
+    <li><%= item.title %>, <%= item.price %> €, à télécharger <a href="<%= item.image_url %>">en cliquant ici</a></li>
+  <% end %>
+</ul>
+
+<p>Total : <%= @order %> € </p>
