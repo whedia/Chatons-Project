@@ -14,6 +14,16 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Contactez-nous</a>
       </li>
+      
+        <% if user_signed_in? %>
+          <% if current_user.admin == true %>
+            <li class="nav-item">
+          <a>
+            <%= link_to "Page Admin", admin_users_path, :class=>"nav-link" %>
+          </a>
+          <% end %>
+        <% end %>
+
     </ul>
     <div class="dropdown">
       <ul>
