@@ -19,11 +19,15 @@
   </div>
 
   <div class="row justify-content-center mb-5">
-  <% if user_signed_in? %>
-    <%= link_to "Commander", new_order_path(:cart_id => current_user.cart.id), :class => "ml-3 btn btn-success" %>
+    <% if user_signed_in?%>
+      <% if current_cart.items.length > 0 %>
+        <%= link_to "Commander", new_order_path(:cart_id => current_user.cart.id), :class => "ml-3 btn btn-success" %>
+      <% else %>
+        <h2> Vous n'avez pas encore d'images dans votre panier</h2>
+      <% end %>
     <% else %>
-    <%= link_to "S'inscrire pour pouvoir commander", new_user_registration_path, :class=>"nav-link" %></a>
-     <% end %>
+      <%= link_to "S'inscrire pour pouvoir commander", new_user_registration_path, :class=>"nav-link" %></a>
+    <% end %>
   </div>
 
 </div>
