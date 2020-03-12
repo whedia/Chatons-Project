@@ -17,10 +17,11 @@
     </ul>
     <div class="dropdown">
       <ul>
-        <% if user_signed_in? %>
+        
           <a type="button">
-           <%= link_to "Panier", cart_path(current_user.cart.id), :class=>"btn btn-info" %>
+           <%= link_to "Panier", cart_path(current_cart.id), :class=>"btn btn-info" %>
           </a>
+          <% if user_signed_in? %>
           <a>
           <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, :class=>"btn btn-secondary" %>
           </a>
