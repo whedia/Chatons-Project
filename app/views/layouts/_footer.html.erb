@@ -88,7 +88,7 @@
           <a href="#!">Favoris du site</a>
         </p>
         <p>
-          <a href="#!">Un chat peut en cacher un autre</a>
+          <a href="https://www.estrepublicain.fr/justice/2012/05/24/un-chat-peut-en-cacher-un-autre">Un chat peut en cacher un autre</a>
         </p>
       </div>
       <!-- Grid column -->
@@ -98,13 +98,13 @@
         <h6 class="text-uppercase font-weight-bold">Liens utiles</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <a href="#!">Mon compte</a>
+          <%= link_to "Votre profil", edit_user_registration_path %>
         </p>
         <p>
-          <a href="#!">Mon panier</a>
+          <%= link_to "Panier", cart_path(current_cart.id) %>
         </p>
         <p>
-          <a href="#!">Je sais pas</a>
+          <a href="https://en.wiktionary.org/wiki/discombobulator">Discombobulator wtf is it?</a>
         </p>
       </div>
       <!-- Grid column -->
@@ -114,11 +114,11 @@
         <h6 class="text-uppercase font-weight-bold">Contact</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <i class="fas fa-home mr-3"></i>69005 Lyon, France</p>
+          <i class="fas fa-home mr-3"></i>47 rue des allumés de la life, 69005 Lyon, France</p>
         <p>
-          <i class="fas fa-envelope mr-3"></i> chaton@project.com</p>
+          <i class="fas fa-envelope mr-3"></i> chaton@petit-minou.com</p>
         <p>
-          <i class="fas fa-phone mr-3"></i> + 33 4 23 45 67 88</p>
+          <i class="fas fa-phone mr-3"></i> + 33 4 23 45 67 88 <small>Mais ne nous appelez pas, on aime pas trop le téléphone.</small></p>
       </div>
       <!-- Grid column -->
     </div>
@@ -130,7 +130,7 @@
     <blockquote>
       "Soyez fou, soyez footer"
     </blockquote>
-    © 2020 Copyright:<a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    © 2020 Copyright:<a href="https://petits-chatons-by-lyon-thp.herokuapp.com/">Petits chats choupinou</a>
   </div>
   <!-- Copyright -->
 </footer>
