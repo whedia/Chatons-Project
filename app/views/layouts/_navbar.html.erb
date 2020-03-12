@@ -12,17 +12,19 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contactez-nous</a>
+        <a>
+        <%= link_to "Contactez-nous", static_pages_contact_path, :class=>"nav-link" %>
+        </a>
       </li>
       
-        <% if user_signed_in? %>
-          <% if current_user.admin == true %>
-            <li class="nav-item">
+      <% if user_signed_in? %>
+        <% if current_user.admin == true %>
+          <li class="nav-item">
           <a>
             <%= link_to "Page Admin", admin_users_path, :class=>"nav-link" %>
           </a>
-          <% end %>
         <% end %>
+      <% end %>
 
     </ul>
     <div class="dropdown">
