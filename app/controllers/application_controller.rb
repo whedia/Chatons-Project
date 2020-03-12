@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
     if user_signed_in?
       @cart = current_user.cart
     else
-      if session[:current_cart]
+      if session[:current_cart]  && Cart.find_by(id: session[:current_cart])
         @cart = Cart.find(session[:current_cart])
       else
         @cart = Cart.create
