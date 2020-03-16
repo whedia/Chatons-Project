@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
-  
-    devise_for :users, controllers: {
-      sessions: 'users/sessions',
-      registrations: 'users/registrations'
-    }
+
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+
+  resources :avatars, only: [:create]
+
+  devise_scope :user do
+    post 'users/edit/avatars', to: 'avatars#create'
+  end
 
   root 'items#index'
   resources :items

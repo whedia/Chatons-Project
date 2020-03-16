@@ -1,1 +1,6 @@
 /* Entrez ici le CSS avec lequel vous souhaitez jouer! */
+
+.avatar {
+  max-width:50%;
+  height:auto;
+}
